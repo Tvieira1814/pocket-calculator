@@ -1,18 +1,99 @@
 var expression="";
+var symbol=false;
+inputLength=9;
 function fourfunction (operation) {
-  if (operation == '+') {
+  if (operation == '+' && symbol==true) {
    expression+="+";
-}
-if (operation=='x') {
-  expression+="*";
-}
-if (operation == ('/') {
+   document.getElementById('addition').innerHTML=expression;
+   symbol=false;
+   inputLength++;
+ }
+ if (operation=='x' && symbol==true) {
+  expression+='*';
+  document.getElementById('addition').innerHTML=expression;
+  symbol=false;
+ }
+ if (operation == '/' && symbol=true) {
   expression+="/";
-}
-if (operation=='-') {
+  document.getElementById('addition').innerHTML=expression;
+  symbol=false;
+ }
+ if (operation=='-' && symbol=true) {
   expression+='-';
+  document.getElementById('addition').innerHTML=expression;
+  symbol=false;
+ }
+ if (operation== '%' && symbol==true) {
+  document.getElementById('addition').innerHTML=expression;
+ }
+ if (operation=='.' && symbol=true) {
+  expression+='.';
+  document.getElementById('addition').innerHTML=expression;
+  symbol=false;
+ }
 }
-
+function numbers(operations) {
+  if(operation=='0') {
+    expression+='0';
+    document.getElementById('addition').innerHTML=expression;
+    symbol=true;
+ }
+ if (operation=='1') {
+   expression+='1';
+   document.getElementById('addition').innerHTML=expression;
+   symbol=true;
+ }
+ if (operation=='2') {
+   expression+='2';
+   document.getElementById('addition').innerHTML=expression;
+   symbol=true;
+ }
+ if (operation=='3') {
+   expression+='3';
+   document.getElementById('addition').innerHTML=expression;
+   symbol=true;
+ }
+ if (operation=='4') {
+   expression+='4';
+   document.getElementById('addition').innerHTML=expression;
+   symbol=true;
+ }
+ if (operation=='5') {
+   expression+='5';
+   document.getElementById('addition').innerHTML=expression;
+   symbol=true;
+ }
+ if (operation=='6') {
+   expression+='6
+   document.getelementById('addition').innerHTML=expression;
+   symbol=true;
+ }
+ if (operation=='7') {
+   expression+='7';
+   document.getElementByid('addition').innerHTML=expression;
+   symbol=true;
+ }
+ if (operation=='8') {
+   expression+='8';
+   document.getelementById('addition').innerHTML=expression;
+   symbol=true
+ }
+ if (operation=='9') {
+   expression+='9';
+   document.getElementById('addition').innerHTML=expression;
+   symbol=true;
+ }
+ if (operation=='ans') {
+   expression+='ans';
+   document.getElementById('addition').innerHTML=expression;
+   symbol=true;
+ }
+}
+function AC() {
+  expression='';
+  document.getElementById('addition').innerHTML=expression;
+}
+////come back here after checking all work
 console.log (expression);
 
 }
