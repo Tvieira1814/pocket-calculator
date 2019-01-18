@@ -1,156 +1,285 @@
-var expression="";
-var symbol=false;
-inputLength=9;
-function fourfunction (operation) {
-  if (operation == '+' && symbol==true) {
-   expression+="+";
-   document.getElementById('addition').innerHTML=expression;
-   symbol=false;
-   inputLength++;
- }
- if (operation=='x' && symbol==true) {
-  expression+='*';
-  document.getElementById('addition').innerHTML=expression;
-  symbol=false;
- }
- if (operation == '/' && symbol=true) {
-  expression+="/";
-  document.getElementById('addition').innerHTML=expression;
-  symbol=false;
- }
- if (operation=='-' && symbol=true) {
-  expression+='-';
-  document.getElementById('addition').innerHTML=expression;
-  symbol=false;
- }
- if (operation== '%' && symbol==true) {
-  document.getElementById('addition').innerHTML=expression;
- }
- if (operation=='.' && symbol=true) {
-  expression+='.';
-  document.getElementById('addition').innerHTML=expression;
-  symbol=false;
- }
-}
-function numbers(operations) {
-  if(operation=='0') {
-    expression+='0';
-    document.getElementById('addition').innerHTML=expression;
-    symbol=true;
- }
- if (operation=='1') {
-   expression+='1';
-   document.getElementById('addition').innerHTML=expression;
-   symbol=true;
- }
- if (operation=='2') {
-   expression+='2';
-   document.getElementById('addition').innerHTML=expression;
-   symbol=true;
- }
- if (operation=='3') {
-   expression+='3';
-   document.getElementById('addition').innerHTML=expression;
-   symbol=true;
- }
- if (operation=='4') {
-   expression+='4';
-   document.getElementById('addition').innerHTML=expression;
-   symbol=true;
- }
- if (operation=='5') {
-   expression+='5';
-   document.getElementById('addition').innerHTML=expression;
-   symbol=true;
- }
- if (operation=='6') {
-   expression+='6
-   document.getelementById('addition').innerHTML=expression;
-   symbol=true;
- }
- if (operation=='7') {
-   expression+='7';
-   document.getElementByid('addition').innerHTML=expression;
-   symbol=true;
- }
- if (operation=='8') {
-   expression+='8';
-   document.getelementById('addition').innerHTML=expression;
-   symbol=true
- }
- if (operation=='9') {
-   expression+='9';
-   document.getElementById('addition').innerHTML=expression;
-   symbol=true;
- }
- if (operation=='ans') {
-   expression+='ans';
-   document.getElementById('addition').innerHTML=expression;
-   symbol=true;
- }
-}
-function AC() {
-  expression='';
-  document.getElementById('addition').innerHTML=expression;
-}
-////come back here after checking all work
-console.log (expression);
+let string = "";
+var state = 0
+let saved= "";
+let operatorUsed = 0;
+var decimalUsed = false;
+var acUsed = false;
 
-}
-function numbers (operation) {
-if (operation=='.') {
-  expression+='.';
-}
-if (operation=='0') {
-  expression+='0';
-}
-if (operation=='1') {
-  expression+='1';
-}
-if (operation=='2') {
-  expression+='2';
-}
-if (operation=='3') {
-  expression+='3';
-}
-if (operation=='4') {
-  expression+='4';
-}
-if (operation=='5') {
-  expression+='5'
-}
-if (operation=='6') {
-  expression+='6';
-}
-if (operation=='7') {
-  expression+='7';
-}
-if (operation=='8') {
-  expression+='8';
-}
-if (operation=='9') {
-  expression+='9';
-}
-console.log (expression);
-}
-function equals (operation) {
-
-
-  if (operation== '=') {
-    if (eval(expression)==Infinity) {
-      document.getElementById('addition').innerHTML="Error";
+function button0() {
+  if (state == 1) {
+    string = "0"
+  } else {
+    if (operatorUsed == 1) {
+      operatorUsed = 0;
+      string = saved;
     }
-    else{
-
-  document.getElementById('addition').innerHTML=eval(expression):
+    if (decimalUsed == 1) {
+      decimalUsed = 0;
+      string = saved;
     }
-
+    string += "0"
+  }
+  var div = document.getElementById("output");
+  div.innerHTML = string;
 }
 
-  try {
-    eval(expression)
+function button1() {
+  if (state == 1) {
+    string = "1"
+  } else {
+    if (operatorUsed == 1) {
+      operatorUsed = 0;
+      string = saved;
+    }
+    if (decimalUsed == 1) {
+      decimalUsed = 0;
+      string = saved;
+    }
+    string += "1"
   }
-  catch(err) {
-    document.getElementById('adddition').innerHTML="Error";
+  var div = document.getElementById("output");
+  div.innerHTML = string;
+}
+
+function button2() {
+  if (state == 1) {
+    string = "2"
+  } else {
+    if (operatorUsed == 1) {
+      operatorUsed = 0;
+      string = saved;
+    }
+    if (decimalUsed == 1) {
+      decimalUsed = 0;
+      string = saved;
+    }
+    string += "2"
   }
+  var div = document.getElementById("output");
+  div.innerHTML = string;
+}
+
+function button3() {
+  if (state == 1) {
+    string = "3"
+  } else {
+    if (operatorUsed == 1) {
+      operatorUsed = 0;
+      string = saved;
+    }
+    if (decimalUsed == 1) {
+      decimalUsed = 0;
+      string = saved;
+    }
+  string += "3"
+  }
+  var div = document.getElementById("output");
+  div.innerHTML = string;
+}
+
+function button4() {
+  if (state == 1) {
+    string = "4"
+  } else {
+    if (operatorUsed == 1) {
+      operatorUsed = 0;
+      string = saved;
+    }
+    if (decimalUsed == 1) {
+      decimalUsed = 0;
+      string = saved;
+    }
+  string += "4"
+  }
+  var div = document.getElementById("output");
+  div.innerHTML = string;
+}
+
+function button5() {
+  if (state == 1) {
+    string = "5"
+  } else {
+    if (operatorUsed == 1) {
+      operatorUsed = 0;
+      string = saved;
+    }
+     if (decimalUsed == 1) {
+      decimalUsed = 0;
+      string = saved;
+    }
+  string += "5"
+  }
+  var div = document.getElementById("output");
+  div.innerHTML = string;
+}
+
+function button6() {
+  if (state == 1) {
+    string = "6"
+  } else {
+    if (operatorUsed == 1) {
+    operatorUsed = 0;
+    string = saved;
+    }
+    if (decimalUsed == 1) {
+      decimalUsed = 0;
+      string = saved;
+    }
+  string += "6"
+  }
+  var div = document.getElementById("output");
+  div.innerHTML = string;
+}
+
+function button7() {
+  if (state == 1) {
+    string = "7"
+  } else {
+    if (operatorUsed == 1) {
+      operatorUsed = 0;
+      string = saved;
+    }
+    if (decimalUsed == 1) {
+      decimalUsed = 0;
+      string = saved;
+    }
+  string += "7"
+  }
+  var div = document.getElementById("output");
+  div.innerHTML = string;
+}
+
+function button8() {
+  if (state == 1) {
+    string = "8"
+  } else {
+    if (operatorUsed == 1) {
+      string = saved;
+      operatorUsed = 0;
+    }
+    if (decimalUsed == 1) {
+      decimalUsed = 0;
+      string = saved;
+    }
+  string += "8"
+  }
+  var div = document.getElementById("output");
+  div.innerHTML = string;
+}
+
+function button9() {
+  if (state == 1) {
+    string = "9"
+  } else {
+    if (operatorUsed == 1) {
+      string = saved;
+      operatorUsed = 0;
+    }
+    if (decimalUsed == 1) {
+      decimalUsed = 0;
+      string = saved;
+    }
+    string += "9"
+  }
+  var div = document.getElementById("output");
+  div.innerHTML = string;
+}
+
+function ac() {
+  var div = document.getElementById("output");
+  div.innerHTML = 0;
+  string = " "
+  saved = ""
+  operatorUsed = 0;
+  acUsed = true;
+  state = 0;
+  if (acUsed == true) {
+    decimalUsed = false;
+    document.getElementById("decimalButton").disabled = false;
+  }
+}
+
+function multiplication() {
+  var div = document.getElementById("output");
+  saved = string;
+  saved += "*"
+  div.innerHTML = saved;
+  state = 0;
+  operatorUsed = 1;
+  if (operatorUsed == 1) {
+    document.getElementById("decimalButton").disabled = false;
+  }
+}
+
+function addition() {
+  var div = document.getElementById("output");
+  saved = string;
+  saved += "+"
+  div.innerHTML = saved;
+  state = 0;
+  operatorUsed = 1;
+  if (operatorUsed == 1) {
+    document.getElementById("decimalButton").disabled = false;
+  }
+}
+
+function division() {
+  var div = document.getElementById("output");
+  saved = string;
+  saved += "/"
+  div.innerHTML = saved;
+  state = 0;
+  operatorUsed = 1;
+  if (operatorUsed == 1) {
+    document.getElementById("decimalButton").disabled = false;
+  }
+}
+
+function subtraction() {
+  var div = document.getElementById("output");
+  saved = string;
+  saved += "-"
+  div.innerHTML = saved;
+  state = 0;
+  operatorUsed = 1;
+  if (operatorUsed == 1) {
+    document.getElementById("decimalButton").disabled = false;
+  }
+}
+
+function equals() {
+  var div= document.getElementById("output");
+  string = eval(string);
+  div.innerHTML = Number(string).toLocaleString();
+  if (Number(string) > 999999999 || Number(string) < 0.000000001) {
+    div.innerHTML = Number(string).toExponential()
+  }
+  state = 1;
+}
+
+function negative() {
+  var div= document.getElementById("output");
+  string = Number(string) * (-1);
+  div.innerHTML = string;
+  state = 0;
+}
+
+function decimal() {
+  if (decimalUsed == false){
+    var div = document.getElementById("output");
+    saved = string;
+    saved += ".";
+    div.innerHTML = saved;
+    decimalUsed = true;
+  }
+  if (decimalUsed == true) {
+    document.getElementById("decimalButton").disabled = true;
+  }
+}
+
+function percent() {
+  var div = document.getElementById("output");
+  string = Number(string) * (0.01)
+  div.innerHTML = string;
+  state = 0;
 }

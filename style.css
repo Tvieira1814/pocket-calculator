@@ -1,0 +1,55 @@
+button {
+font-size: 30px;
+color: red;
+background: #2a2b2b;
+height: 125px;
+width: 125px;
+text-align: center;
+border: 2px solid black;
+}
+
+.operators {
+  background: #FF9500;
+}
+
+#zero {
+  font-size: 30px;
+  color: red;
+  height: 125px;
+  width: 250px;
+  text-align: center;
+  border: 2px solid black;
+}
+
+#parenth {
+    font-size: 49.5px;
+    color: red;
+    height: 125px;
+    width: 250px;
+    border-radius: 80px / 80px;
+    text-align: center;
+    border: 2px solid black;
+}
+
+.output {
+display: block;
+width: 47%;
+height: 100px;
+border: 2px solid black;
+font: "Times New Roman", "Times New Roman", "Times New Roman", sans-serif;
+font-size: 50px;
+color: Red;
+}
+
+.mod {
+  background: #D4D4D2;
+  color: black;
+}
+
+#outPopUp {
+  align: center;
+}
+
+body {
+  background-image: url("Pine1.jpg");
+}
